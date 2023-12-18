@@ -18,13 +18,15 @@
 
 1. Download pre-build WebDriverAgent-Runner: https://github.com/appium/WebDriverAgent/releases
 
-2. Sign via `iOS App Signer` and MUST install via `Sideloadly`. Install via XCode will cause errors "bundle not valid".
+2. Unzip → Create "Payload" folder → Put unzipped file inside → Zip "Payload" → Rename ".zip" to ".ipa"
 
-3. Turn off iPhone Auto lock: `Settings → Display and Brightness`
+3. Sign IPA via `iOS App Signer` and MUST install via `Sideloadly`. Install via XCode will cause errors "bundle not valid".
 
-4. Connect device to Xcode and Trust, reconnect Xcode only after every device restarted
+4. Turn off iPhone Auto lock: `Settings → Display and Brightness`
 
-5. Start `WebDriverAgent` app
+5. Connect device to Xcode and Trust, reconnect Xcode only after every device restarted
+
+6. Start `WebDriverAgent` app
 
 ## Starting automation
 
