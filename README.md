@@ -12,7 +12,7 @@
 4. Start server: `appium server --use-drivers XCUITest --use-plugins ocr,images --allow-cors --base-path /wd/hub`
 `appium server --use-drivers XCUITest --allow-cors --base-path /wd/hub`
 
-5. Download and start Appium Inspector: https://github.com/appium/appium-inspector/releases
+5. Download and start Appium Inspector: https://github.com/appium/appium-inspector/releases ; check its README for how to use
 
 ## On iPhone devices
 
