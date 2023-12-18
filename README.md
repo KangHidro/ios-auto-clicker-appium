@@ -18,7 +18,7 @@
 
 1. Download pre-build WebDriverAgent-Runner: https://github.com/appium/WebDriverAgent/releases
 
-2. Sign via `iOS App Signer` and MUST install via `Sideloadly`. Install via XCode will cause errors.
+2. Sign via `iOS App Signer` and MUST install via `Sideloadly`. Install via XCode will cause errors "bundle not valid".
 
 3. Turn off iPhone Auto lock: `Settings → Display and Brightness`
 
@@ -32,21 +32,21 @@ Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), 
 
 ```
     "platformName": "iOS",
-    "appium:platformVersion": "17.1.1",
+    "appium:platformVersion": "17.1.1", // your iPhone version
     "appium:automationName": "XCUITest",
-    "appium:deviceName": "iPhone 12",
-    "appium:bundleId": "<target bundle ID>",
-    "appium:xcodeOrgId": "<Team ID of Apple Development Certiicate>",
+    "appium:deviceName": "iPhone 12", // your iPhone model
+    "appium:bundleId": "<target bundle ID>", // optional
+    "appium:xcodeOrgId": "<Team ID of Apple Development Certiicate>", // which signed WebDriverAgent
     "appium:xcodeSigningId": "Apple Developer",
     "appium:udid": "<udid of iPhone>",
     "$cloud:appiumOptions": {
       "version": "2.2.2",
-      "automationVersion": "5.10.2",
+      "automationVersion": "5.10.2", // re-check this version of appium xcuitest driver
       "plugins": [
         "images",
         "ocr"
       ]
     },
     "appium:clearSystemFiles": true,
-    "appium:newCommandTimeout": 3600,
+    "appium:newCommandTimeout": 3600, // in seconds
 ```
