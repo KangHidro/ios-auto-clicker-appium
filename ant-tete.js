@@ -3,15 +3,15 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "17.1.1",
+    "appium:platformVersion": "17.3",
     "appium:automationName": "XCUITest",
     "appium:deviceName": "iPhone 12",
     "appium:xcodeOrgId": "CGD8Z27TTD",
     "appium:xcodeSigningId": "Apple Developer",
     "appium:udid": "00008101-000E61640A01001E",
     "$cloud:appiumOptions": {
-      "version": "2.2.2",
-      "automationVersion": "5.10.2",
+      "version": "2.4.1",
+      "automationVersion": "5.14.0",
       "plugins": [
         "images",
         "ocr"
@@ -46,7 +46,7 @@ async function main() {
     await driver.execute('mobile: tap', { x: 123, y: 579 }); // confirm time
     await driver.pause(1000);
     await driver.execute('mobile: tap', { x: 295, y: 795 }); // go
-    await driver.pause(350_000);
+    await driver.pause(330_000); // 7p
   }
 
   //await driver.deleteSession();

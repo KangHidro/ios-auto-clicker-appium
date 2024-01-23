@@ -9,8 +9,8 @@
 `appium plugin install --source=npm appium-ocr-plugin`
 `appium plugin install images`
 
-4. Start server: `appium server --use-drivers XCUITest --use-plugins ocr,images --allow-cors --base-path /wd/hub`
-`appium server --use-drivers XCUITest --allow-cors --base-path /wd/hub`
+4. Start server: `appium server --use-drivers xcuitest --use-plugins ocr,images --allow-cors --base-path /wd/hub`
+`appium server --use-drivers xcuitest --allow-cors --base-path /wd/hub`
 
 5. Download and start Appium Inspector: https://github.com/appium/appium-inspector/releases ; check its README for how to use
 
@@ -28,13 +28,15 @@
 
 6. Start `WebDriverAgent` app
 
+7. See commands ref: https://appium.github.io/appium-xcuitest-driver/5.6/reference/commands/appium-xcuitest-driver
+
 ## Starting automation
 
 Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), (maybe need to update its values):
 
 ```
     "platformName": "iOS",
-    "appium:platformVersion": "17.1.1", // your iPhone version
+    "appium:platformVersion": "17.3", // your iPhone version
     "appium:automationName": "XCUITest",
     "appium:deviceName": "iPhone 12", // your iPhone model
     "appium:bundleId": "<target bundle ID>", // optional
@@ -42,8 +44,8 @@ Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), 
     "appium:xcodeSigningId": "Apple Developer",
     "appium:udid": "<udid of iPhone>",
     "$cloud:appiumOptions": {
-      "version": "2.2.2",
-      "automationVersion": "5.10.2", // re-check this version of appium xcuitest driver
+      "version": "2.4.1", // re-check this version of appium framework
+      "automationVersion": "5.14.0", // re-check this version of appium xcuitest driver
       "plugins": [
         "images",
         "ocr"
