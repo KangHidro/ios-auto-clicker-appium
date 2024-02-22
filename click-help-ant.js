@@ -42,20 +42,14 @@ async function main() {
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
-    // await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
-    // await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
-    // await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
-    // await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
-    // await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     // Tap chua tri btn
     await driver.execute('mobile: tap', { x: 323, y: 803 });
-    // Switch app man
-    await driver.activateApp('com.allstarunion.ta.ios.vn');
-    // Tap giup do
-    // await driver.execute('mobile: tap', { x: 363, y: 606 }); // phia tren
-    // await driver.execute('mobile: tap', { x: 363, y: 606 }); // phia tren
-    await driver.execute('mobile: doubleTap', { x: 363, y: 651 }); // phia duoi
-    await driver.execute('mobile: doubleTap', { x: 363, y: 651 }); // phia duoi
+    // Switch app
+    await driver.activateApp('com.allstarunion.ta.ios.vn'); // Kang
+    // Tap giup do ben trong
+    await driver.execute('mobile: doubleTap', { x: 195, y: 800 }); // Tap giup do ben trong
+    await driver.execute('mobile: doubleTap', { x: 195, y: 800 }); // Tap giup do ben trong
+
   }
 
   //await driver.deleteSession();

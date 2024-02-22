@@ -13,7 +13,7 @@ async function main() {
       "version": "2.4.1",
       "automationVersion": "5.14.0",
       "plugins": [
-        "images",
+        // "images",
         "ocr"
       ]
     },
@@ -29,21 +29,10 @@ async function main() {
   });
 
   while (true) {
-    await driver.activateApp('com.allstarunion.ta.ios.vn');
-    await driver.pause(5000);
-    await driver.activateApp('com.allstarunion.ta.ios');
-    await driver.pause(5000);
-    await driver.activateApp('com.allstarunion.ta.ios2');
-    await driver.pause(5000);
-    await driver.activateApp('com.allstarunion.ta.ios.vn1');
-    await driver.pause(5000);
-    await driver.activateApp('com.allstarunion.ta.ios.vn2');
-    await driver.pause(5000);
-    await driver.activateApp('com.allstarunion.ta.ios.vn3');
-    await driver.pause(5000);
+    // await driver.execute('mobile: doubleTap', { x: 200, y: 785 }); // nhảy
+    await driver.execute('mobile: doubleTap', { x: 195, y: 785 });
   }
 
-  //await driver.deleteSession();
 }
 
 main().catch(console.log);
