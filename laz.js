@@ -14,7 +14,7 @@ async function main() {
       "automationVersion": "5.14.0",
       "plugins": [
         // "images",
-        // "ocr"
+        "ocr"
       ]
     },
     "appium:clearSystemFiles": true,
@@ -29,15 +29,12 @@ async function main() {
   });
 
   while (true) {
-    // await driver.execute('mobile: tap', { x: 215, y: 258 });
-    // await driver.execute('mobile: tap', { x: 78, y: 405 });
-    await driver.execute('mobile: tap', { x: 313, y: 465 });
-    //
-    await driver.execute('mobile: tap', { x: 290, y: 477 });
-    await driver.execute('mobile: tap', { x: 325, y: 78 });
-    await driver.execute('mobile: tap', { x: 200, y: 634 });
-
-    // await driver.execute('mobile: doubleTap', { x: 197, y: 497 }); buy tang toc
+    // await driver.execute('mobile: doubleTap', { x: 200, y: 785 }); // nhảy
+    // await driver.execute('mobile: doubleTap', { x: 195, y: 785 });
+    await driver.execute('mobile: swipe', { direction: 'up' });
+    await driver.pause(5000);
+    await driver.execute('mobile: swipe', { direction: 'down' });
+    await driver.pause(5000);
   }
 
 }

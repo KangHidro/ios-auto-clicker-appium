@@ -112,7 +112,7 @@ async function main() {
     await driver.execute('mobile: tap', { x: 278, y: 799 }); await driver.pause(350); // Tap Bỏ qua hết
     await driver.execute('mobile: tap', { x: 368, y: 58 }); await driver.pause(350); // Tap close
 
-    await driver.pause(10_000);
+    await driver.pause(30_000);
   }
 
   //await driver.deleteSession();

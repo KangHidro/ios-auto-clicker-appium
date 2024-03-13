@@ -42,6 +42,11 @@ async function main() {
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
+    await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
+    await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
+    await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
+    await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
+    await driver.execute('mobile: doubleTap', { x: 365, y: 236 });
     // Tap chua tri btn
     await driver.execute('mobile: tap', { x: 323, y: 803 });
     // Switch app

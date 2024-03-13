@@ -44,7 +44,7 @@ async function main() {
     await driver.execute('mobile: tap', { x: 123, y: 579 }); await driver.pause(350); // Tap chọn time
     await driver.execute('mobile: tap', { x: 295, y: 795 }); await driver.pause(350); // Tap Go!
 
-    await driver.pause(320_000);
+    await driver.pause(330_000);
   }
 
   //await driver.deleteSession();
