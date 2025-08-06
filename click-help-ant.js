@@ -3,15 +3,15 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "17.3",
-    "appium:automationName": "XCUITest",
+    "appium:platformVersion": "18.6",
+    "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12",
-    "appium:xcodeOrgId": "CGD8Z27TTD",
+    "appium:xcodeOrgId": "9YAC7543MW",
     "appium:xcodeSigningId": "Apple Developer",
     "appium:udid": "00008101-000E61640A01001E",
     "$cloud:appiumOptions": {
-      "version": "2.4.1",
-      "automationVersion": "5.14.0",
+      "version": "2.19.0",
+      "automationVersion": "7.35.1",
       "plugins": [
         // "images",
         // "ocr"

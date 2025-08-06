@@ -28,7 +28,7 @@
 
 6. Start `WebDriverAgent` app
 
-7. See commands ref: https://appium.github.io/appium-xcuitest-driver/5.6/reference/commands/appium-xcuitest-driver
+7. See commands ref: https://appium.github.io/appium-xcuitest-driver/latest/reference/commands/
 
 ## Starting automation
 
@@ -36,16 +36,19 @@ Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), 
 
 ```
     "platformName": "iOS",
-    "appium:platformVersion": "17.3", // your iPhone version
-    "appium:automationName": "XCUITest",
+    "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12", // your iPhone model
-    "appium:bundleId": "<target bundle ID>", // optional
-    "appium:xcodeOrgId": "<Team ID of Apple Development Certiicate>", // which signed WebDriverAgent
+    "appium:platformVersion": "18.6", // your iPhone version
+    "appium:udid": "<udid of iPhone>", // Eg. 00008101-000E61640A01001E
+    "appium:xcodeOrgId": "<Team ID of Apple Development Certiicate>", // which signed WebDriverAgent, open ".mobileprovision" file by Text and find "TeamIdentifier". Eg. 9YAC7543MW
     "appium:xcodeSigningId": "Apple Developer",
-    "appium:udid": "<udid of iPhone>",
+
+    "appium:bundleId": "<target bundle ID>", // optional
+    "appium:noReset": true, // optional, no re-install app before test
+
     "$cloud:appiumOptions": {
-      "version": "2.4.1", // re-check this version of appium framework
-      "automationVersion": "5.14.0", // re-check this version of appium xcuitest driver
+      "version": "2.19.0", // re-check this version of appium framework `appium --version`
+      "automationVersion": "7.35.1", // re-check this version of appium xcuitest driver `appium driver update xcuitest`
       "plugins": [
         "images",
         "ocr"

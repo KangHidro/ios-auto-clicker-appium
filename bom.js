@@ -3,7 +3,7 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "18.6",
+    "appium:platformVersion": "18.0",
     "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12",
     "appium:xcodeOrgId": "9YAC7543MW",
@@ -14,7 +14,7 @@ async function main() {
       "automationVersion": "7.35.1",
       "plugins": [
         // "images",
-        "ocr"
+        // "ocr"
       ]
     },
     "appium:clearSystemFiles": true,
@@ -29,12 +29,9 @@ async function main() {
   });
 
   while (true) {
-    // await driver.execute('mobile: doubleTap', { x: 200, y: 785 }); // nhảy
-    // await driver.execute('mobile: doubleTap', { x: 195, y: 785 });
-    await driver.execute('mobile: swipe', { direction: 'up' });
-    await driver.pause(5000);
-    await driver.execute('mobile: swipe', { direction: 'down' });
-    await driver.pause(5000);
+
+    await driver.execute('mobile: doubleTap', { x: 788, y: 204 });
+    await driver.pause(2000);
   }
 
 }
