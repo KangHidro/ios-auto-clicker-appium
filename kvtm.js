@@ -21,7 +21,7 @@ async function main() {
     protocol: "http",
     hostname: "127.0.0.1",
     port: 4723,
-    path: "/wd/hub/",
+    path: "/",
     capabilities: caps
   });
 
@@ -29,13 +29,6 @@ async function main() {
     // await driver.execute('mobile: tap', { x: 215, y: 477 });
     // await driver.execute('mobile: doubleTap', { x: 286, y: 510 });
     // await driver.execute('mobile: dragFromToForDuration', { duration: 0.5, fromX: 339, fromY: 235, toX: 96, toY: 233 });
-
-    await driver.execute('mobile: tap', { x: 191, y: 274 });
-    await driver.execute('mobile: tap', { x: 313, y: 465 });
-    // buy
-    await driver.execute('mobile: tap', { x: 290, y: 477 });
-    await driver.execute('mobile: tap', { x: 325, y: 78 });
-    await driver.execute('mobile: tap', { x: 200, y: 634 });
 
     // await driver.execute('mobile: doubleTap', { x: 197, y: 497 }); buy tang toc
   }

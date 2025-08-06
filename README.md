@@ -9,8 +9,9 @@
 `appium plugin install --source=npm appium-ocr-plugin`
 `appium plugin install images`
 
-4. Start server: `appium server --use-drivers xcuitest --use-plugins ocr,images --allow-cors --base-path /wd/hub`
-`appium server --use-drivers xcuitest --allow-cors --base-path /wd/hub`
+4. Start server with plugins:
+`appium server --use-drivers xcuitest --use-plugins ocr,images --allow-cors --base-path /`
+Or without plugins: `appium server --use-drivers xcuitest --allow-cors --base-path /`
 
 5. Download and start Appium Inspector: https://github.com/appium/appium-inspector/releases ; check its README for how to use
 
@@ -57,3 +58,14 @@ Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), 
     "appium:clearSystemFiles": true,
     "appium:newCommandTimeout": 3600, // in seconds
 ```
+
+## Commonly used commands
+> Ref: https://appium.github.io/appium-xcuitest-driver/latest/reference/execute-methods
+
+- Tap: `await driver.execute('mobile: tap', { x: 0, y: 0 });`
+- Double tap: `await driver.execute('mobile: doubleTap', { x: 0, y: 0, duration: 1.5 });`
+- Touch & Hold: `await driver.execute('mobile: touchAndHold', { x: 0, y: 0 });`
+- Swipe from center: `await driver.execute('mobile: swipe', { direction: 'up' });`
+- Drag: `await driver.execute('mobile: dragFromToForDuration', { duration: 0.5, fromX: 0, fromY: 0, toX: 9, toY: 9 });`
+- Pinch (Zoom in/out): `await driver.execute('mobile: tap', { scale: 0.5, velocity: 1 });`
+- Press sequential keys: `await driver.execute('mobile: keys', { "keys": ["T", "i", "m", "f", "XCUIKeyboardKeySpace", "XCUIKeyboardKeyEnter"] });`

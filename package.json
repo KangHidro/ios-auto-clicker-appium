@@ -9,6 +9,6 @@
   "author": "Kang",
   "license": "ISC",
   "devDependencies": {
-    "webdriverio": "^8.24.1"
+    "webdriverio": "^9.18.4"
   }
 }
