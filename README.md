@@ -35,6 +35,8 @@ Or without plugins: `appium server --use-drivers xcuitest --allow-cors --base-pa
 
 Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), (maybe need to update its values):
 
+Ref: https://appium.github.io/appium-xcuitest-driver/latest/reference/capabilities
+
 ```
     "platformName": "iOS",
     "appium:automationName": "xcuitest",
@@ -63,9 +65,34 @@ Using this capabilities for any Testing frameworks (Selemium, Webdrive.io,...), 
 > Ref: https://appium.github.io/appium-xcuitest-driver/latest/reference/execute-methods
 
 - Tap: `await driver.execute('mobile: tap', { x: 0, y: 0 });`
-- Double tap: `await driver.execute('mobile: doubleTap', { x: 0, y: 0, duration: 1.5 });`
-- Touch & Hold: `await driver.execute('mobile: touchAndHold', { x: 0, y: 0 });`
+- Double tap: `await driver.execute('mobile: doubleTap', { x: 0, y: 0 });`
+- Touch & Hold: `await driver.execute('mobile: touchAndHold', { x: 0, y: 0, duration: 1.5 });`
 - Swipe from center: `await driver.execute('mobile: swipe', { direction: 'up' });`
 - Drag: `await driver.execute('mobile: dragFromToForDuration', { duration: 0.5, fromX: 0, fromY: 0, toX: 9, toY: 9 });`
 - Pinch (Zoom in/out): `await driver.execute('mobile: tap', { scale: 0.5, velocity: 1 });`
 - Press sequential keys: `await driver.execute('mobile: keys', { "keys": ["T", "i", "m", "f", "XCUIKeyboardKeySpace", "XCUIKeyboardKeyEnter"] });`
+- Wait (ms): `await driver.pause(1000);`
+
+- Perform advanced actions (Tap, hold, move by path, release):
+```
+// https://github.com/jlipps/simple-wd-spec#perform-actions
+// Syntax: driver.performActions(actionArray)
+// If "actionArray" having more than 1 element, all elements will running parallel
+// Eg. Zoom-in/out case
+  driver.performActions([
+    {
+      type: 'pointer',
+      id: 'finger1.1',
+      parameters: { pointerType: 'touch' },
+      actions: [
+        { type: 'pointerMove', duration: 0, x: 55, y: 180 },
+        { type: 'pointerDown', button: 0 },
+        { type: 'pause', duration: 500 },
+        { type: 'pointerMove', duration: 1000, x: 285, y: 625 },
+        { type: 'pointerMove', duration: 1000, x: 55, y: 625 },
+        { type: 'pointerMove', duration: 1000, x: 55, y: 180 },
+        { type: 'pointerUp', button: 0 }
+      ]
+    }
+  ]);
+```
