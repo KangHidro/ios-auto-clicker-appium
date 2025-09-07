@@ -3,7 +3,7 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "18.6",
+    "appium:platformVersion": "18.6.2",
     "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12",
     "appium:xcodeOrgId": "9YAC7543MW",
@@ -70,7 +70,7 @@ async function main() {
     await driver.activateApp('com.microsoft.msedge');
     await driver.execute('mobile: tap', { x: 170, y: 65 });
     const element = await driver.$('//XCUIElementTypeTextField[@name="Address"]');
-    await element.elementSendKeys(element.elementId, `${listWords[i]} là gì`);
+    await element.elementSendKeys(element.elementId, `${listWords[ i ]} là gì`);
     await driver.execute('mobile: tap', { x: 350, y: 745 });
     await driver.pause(10000);
   }

@@ -3,7 +3,7 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "18.6",
+    "appium:platformVersion": "18.6.2",
     "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12",
     "appium:xcodeOrgId": "9YAC7543MW",
@@ -35,7 +35,7 @@ async function main() {
     // await driver.execute('mobile: tap', { x: 368, y: 58 }); await driver.pause(350); // Tap close package or diamond
     // await driver.execute('mobile: tap', { x: 368, y: 58 }); await driver.pause(350); // Tap Dịch ngọt
     // await driver.execute('mobile: tap', { x: 194, y: 580 }); await driver.pause(350); // Tap ra ngoài dịch ngọt
-    await driver.execute('mobile: tap', { x: 275, y: 805 }); await driver.pause(350); // Tap bottom nav Liên minh 
+    await driver.execute('mobile: tap', { x: 275, y: 805 }); await driver.pause(350); // Tap bottom nav Liên minh
     await driver.execute('mobile: tap', { x: 325, y: 550 }); await driver.pause(350); // Tap events
     await driver.execute('mobile: tap', { x: 190, y: 160 }); await driver.pause(350); // Tap event tete
     await driver.execute('mobile: tap', { x: 315, y: 795 }); await driver.pause(3500); // Go to tete

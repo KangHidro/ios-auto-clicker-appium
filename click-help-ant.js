@@ -3,7 +3,7 @@ const { remote } = require('webdriverio');
 async function main() {
   const caps = {
     "platformName": "iOS",
-    "appium:platformVersion": "18.6",
+    "appium:platformVersion": "18.6.2",
     "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12",
     "appium:xcodeOrgId": "9YAC7543MW",

@@ -41,7 +41,7 @@ Ref: https://appium.github.io/appium-xcuitest-driver/latest/reference/capabiliti
     "platformName": "iOS",
     "appium:automationName": "xcuitest",
     "appium:deviceName": "iPhone 12", // your iPhone model
-    "appium:platformVersion": "18.6", // your iPhone version
+    "appium:platformVersion": "18.6.2", // your iPhone version
     "appium:udid": "<udid of iPhone>", // Eg. 00008101-000E61640A01001E
     "appium:xcodeOrgId": "<Team ID of Apple Development Certiicate>", // which signed WebDriverAgent, open ".mobileprovision" file by Text and find "TeamIdentifier". Eg. 9YAC7543MW
     "appium:xcodeSigningId": "Apple Developer",
